@@ -23,8 +23,11 @@ patient_dict = {'name':'abhigyan',
                 'age':35,
                 'address':address1 }
 
-patient = Patient(**patient_dict)
+patient1 = Patient(**patient_dict)
 
-print(patient)
-print(patient.address.city)
-print(patient.address.pin)
+temp = patient1.model_dump()
+temp1 = patient1.model_dump_json()
+
+print(type(temp))
+print(type(temp1))
+print(temp1)
