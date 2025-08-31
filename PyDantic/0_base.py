@@ -1,14 +1,14 @@
 from pydantic import BaseModel, EmailStr
-from typing import List, Dict      
+from typing import List, Dict , Optional    
 
 class Patient(BaseModel):
     
     name : str
     email:EmailStr
     age:int
-    weight: float
-    married: bool
-    allergies:List[str]
+    weight: float 
+    married: bool = False
+    allergies:Optional[List[str]] = None
     contact_details:Dict[str,str]
     
     
